@@ -36,6 +36,17 @@ const History = (props) => {
 }
 
 const App = () => {
+  const [value,setValue] = useState(10)
+  
+  return(
+    <div>
+      {value}
+      <button onClick={() => setValue(0)}>reset to zero</button>
+    </div>
+  )
+}
+
+const App5 = () => {
   const [clicks,setClicks] = useState({
     left :0,right:0
   })

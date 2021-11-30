@@ -38,10 +38,15 @@ const History = (props) => {
 const App = () => {
   const [value,setValue] = useState(10)
   
+  const hello = () => {
+    const handler = () => console.log('hello world')
+    return handler
+  }
+
   return(
     <div>
       {value}
-      <button onClick={() => setValue(0)}>reset to zero</button>
+      <button onClick={hello()}>reset to zero</button>
     </div>
   )
 }
